@@ -32,6 +32,8 @@ export class InfoService {
     });
   }
 
+
+
   getAllPosts(): Promise<Post[]> {
     return new Promise((resolve, reject) => {
       resolve(this.arrPost);

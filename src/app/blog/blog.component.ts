@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../info.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  posts: any[];
+
+  constructor(private infoService: InfoService) { }
 
   ngOnInit(): void {
+    this.infoService.getAllPosts()
+      .then(posts => {
+        this.posts = posts;
+      })
+      .catch(error => console.log(error)
+      )
   }
 
 }

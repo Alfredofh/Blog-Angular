@@ -1,1 +1,30 @@
+header {
+ display: flex;
+ flex-direction: row;
+ margin: 0 auto;
+ justify-content: center;
+}
 
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    font-family:'Playfair Display', serif;
+    font-size: 25px;
+    border: 1px solid #DABECA;
+    background-color: #5D5F71;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+header ul li:hover {
+background-color:#8689a3 ;
+cursor: pointer;
+}

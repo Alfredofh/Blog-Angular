@@ -27,12 +27,7 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.infoService.getAllPosts()
-      .then(posts => {
-        this.posts = posts;
-      })
-      .catch(error => console.log(error)
-      )
+
   }
 
   async onSubmit() {

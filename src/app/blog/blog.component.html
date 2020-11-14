@@ -1,1 +1,9 @@
-<p>blog works!</p>
+<div class="posts">
+    <div class="post" *ngFor="let post of posts">
+        <h3>{{post.titulo}}</h3>
+        <p>{{post.texto}}</p>
+        <p>{{post.autor}}</p>
+        <img [src]="post.imagen">
+        <p>{{post.fecha}}</p>
+    </div>
+</div>

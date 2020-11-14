@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 
 
+
 export interface Post {
   titulo: string;
   texto: string;
@@ -29,6 +30,13 @@ export class InfoService {
 
       resolve(this.arrPost)
     });
+  }
 
+  getAllPosts(): Promise<Post[]> {
+    return new Promise((resolve, reject) => {
+      resolve(this.arrPost);
+      console.log(this.arrPost);
+
+    })
   }
 }

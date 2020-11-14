@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { InfoService } from '../info.service';
+import { InfoService, Post } from '../info.service';
 
 @Component({
   selector: 'app-formulario',
@@ -8,6 +8,8 @@ import { InfoService } from '../info.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+
+  posts: Post[];
 
   formulario: FormGroup;
 
@@ -24,10 +26,20 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.infoService.getAllPosts()
+      .then(posts => {
+        this.posts = posts;
+      })
+      .catch(error => console.log(error)
+      )
   }
 
   async onSubmit() {
     console.log(this.formulario.value);
     await this.infoService.addReceta(this.formulario.value);
+    this.formulario.reset();
   }
 }
+
+

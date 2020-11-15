@@ -1,3 +1,10 @@
+<select (change)="onChange($event)">
+    <option value="selecciona">Selecciona categoría</option>
+    <option value="carnes">Carnes</option>
+    <option value="pescados">Pescados</option>
+    <option value="postres">Postres</option>
+    <option value="verduras">Verduras</option>
+</select>
 <div class="posts">
     <div class="post" *ngFor="let post of posts">
         <h3>{{post.titulo}}</h3>

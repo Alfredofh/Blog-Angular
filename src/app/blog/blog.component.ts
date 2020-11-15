@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoService } from '../info.service';
+import { InfoService, Post } from '../info.service';
 
 @Component({
   selector: 'app-blog',
@@ -8,7 +8,7 @@ import { InfoService } from '../info.service';
 })
 export class BlogComponent implements OnInit {
 
-  posts: any[];
+  posts: Post[];
 
   constructor(private infoService: InfoService) {
   }
@@ -20,6 +20,14 @@ export class BlogComponent implements OnInit {
       })
       .catch(error => console.log(error)
       )
+  }
+
+  async onChange($event) {
+    if ($event.target.value === 'selecciona') {
+      this.posts = await this.infoService.getAllPosts();
+    } else {
+      this.posts = await this.infoService.getPostByCategory($event.target.value);
+    }
   }
 
 }

@@ -10,7 +10,8 @@ export class BlogComponent implements OnInit {
 
   posts: any[];
 
-  constructor(private infoService: InfoService) { }
+  constructor(private infoService: InfoService) {
+  }
 
   ngOnInit(): void {
     this.infoService.getAllPosts()

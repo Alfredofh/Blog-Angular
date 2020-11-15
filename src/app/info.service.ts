@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 
-
+export enum Categorias {
+  carnes,
+  pescados,
+  postres,
+  verduras
+}
 
 
 export interface Post {
@@ -18,9 +23,11 @@ export interface Post {
 export class InfoService {
 
   arrPost: Post[];
+  categorias: Post[];
 
   constructor() {
     this.arrPost = [];
+    this.categorias = [];
   }
 
   addReceta(pPost): Promise<Post[]> {
@@ -40,5 +47,14 @@ export class InfoService {
       console.log(this.arrPost);
 
     })
+  }
+
+  getPostByCategory(pCategoria: string): Promise<Post[]> {
+    return new Promise((resolve, reject) => {
+      const listaFiltrada = this.arrPost.filter(post => {
+        return post.categoria === pCategoria
+      });
+      resolve(listaFiltrada);
+    });
   }
 }

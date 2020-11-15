@@ -15,7 +15,11 @@
     <input type="date" formControlName="fecha">
 
     <label>Categoría</label>
-    <input type="text" formControlName="categoria">
-
-    <input type="submit" value="Enviar">
+    <select formControlName="categoria">
+        <option value="carnes">Carnes</option>
+        <option value="pescados">Pescados</option>
+        <option value="postres">Postres</option>
+        <option value="verduras">Verduras</option>
+    </select>
+    <input type="submit" value="Enviar" class="boton">
 </form>

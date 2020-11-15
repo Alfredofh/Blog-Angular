@@ -2,8 +2,9 @@
     <div class="post" *ngFor="let post of posts">
         <h3>{{post.titulo}}</h3>
         <p>{{post.texto}}</p>
-        <p>{{post.autor}}</p>
         <img [src]="post.imagen">
+        <p>{{post.autor}}</p>
         <p>{{post.fecha}}</p>
+        <p>{{post.categoria}}</p>
     </div>
 </div>

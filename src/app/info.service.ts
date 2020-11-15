@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { POSTS } from './database/posts.db';
 
 
 export interface Post {
@@ -6,7 +7,7 @@ export interface Post {
   texto: string;
   autor: string;
   imagen: string;
-  fecha: Date;
+  fecha: string;
   categoria: string;
 }
 
@@ -36,8 +37,8 @@ export class InfoService {
 
   getAllPosts(): Promise<Post[]> {
     return new Promise((resolve, reject) => {
-      resolve(this.arrPost);
-      console.log(this.arrPost);
+      resolve(this.arrPost = POSTS);
+      console.log(POSTS);
 
     })
   }
@@ -50,4 +51,5 @@ export class InfoService {
       resolve(listaFiltrada);
     });
   }
+
 }

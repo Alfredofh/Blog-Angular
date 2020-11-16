@@ -22,7 +22,7 @@ export const POSTS: Post[] = [
         titulo: 'Salmon al horno con verduras',
         autor: 'Alfredo',
         categoria: 'pescados',
-        imagen: 'https://cdn.queapetito.com/wp-content/uploads/2020/02/salmon-al-horno-con-salsa-de-soja-600x469.jpg',
+        imagen: 'https://t2.rg.ltmcdn.com/es/images/6/4/2/img_salmon_al_horno_al_estilo_japones_50246_600.jpg',
         texto: 'Pelamos y cortamos la patata en láminas finas, la zanahoria, la cebolla en juliana. El ajo lo picamos y los pimientos los cortamos en cubos. Disponemos todo en una bandeja de horno.  Regamos con 1/2 vaso de agua, para que no se pegue la verdura en la bandeja, al hornear. Echamos una pizca de sal y pimienta, un chorrito de aceite y lo metemos en el horno. Pasados alrededor de 30 minutos, lo retiramos del horno. La verdura aún estará a medio hacer pero, esa es la idea. Salpimentamos los lomos del salmón y los ponemos en la fuente, sobre la verdura, con la parte de la piel mirando hacia arriba. Regamos todo con un poco de vino blanco y volvemos a meter en el horno. Otros 20 minutos más. Tiempo suficiente para que la verdura termine de cocinarse y el salmón quede en su punto.',
         fecha: '2020-12-2'
     },
